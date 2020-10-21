@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>scope of variable</title>
+	<script type="text/javascript">
+		var b = 6;                              //global variable
+		//var1 = "manu"
+		function myfun() {
+			var a = 5;                           //local variable
+            var1 = "manu"                        
+         // this type of declaration of varaiable make them global variable
+            document.write("<h1>"+a+"</h1>");   
+            document.write("<h1>"+b+"</h1>");
+		}
+
+		myfun();
+		document.write("<h1>"+var1 +"</h1>");
+        document.write("<h1>"+b+"</h1>");
+	</script>
+</head>
+<body>
+
+</body>
+</html>

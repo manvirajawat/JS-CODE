@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Basic Animation</title>
+	<script type="text/javascript">
+
+       var width = 100;
+       var difference = 2;
+       var intervalID = 0;
+       //document.getElementById("img1").style.width = width;
+       function increase() {
+
+          //setInterval(expand,20);
+          clearInterval(intervalID);
+          intervalID = setInterval(expand,10);
+
+       }
+       function expand() {
+
+       	if(width < 200) {
+
+       		width = width + difference;
+       		document.getElementById("img1").style.width=width+"px";
+       		console.log(width);
+
+       	} else {
+
+       		clearInterval(intervalID);
+       	}
+
+       }
+       function decrease() {
+       	
+       	//setInterval(shrink,20);
+       	clearInterval(intervalID);
+       	intervalID = setInterval(shrink,10);
+
+       }
+       function shrink() {
+
+       	if(width > 100) {
+
+       		width = width - difference;
+       		document.getElementById("img1").style.width=width+"px";
+       		console.log(width);
+
+       	} else {
+
+       		clearInterval(intervalID);
+       	}
+
+       }
+    
+	</script>
+<body>
+
+     <br><br>
+     <img id="img1" src="../images/img.jpg" width="100px" onmouseover="increase()" onmouseout="decrease()" />
+     
+
+
+</body>
+</html>

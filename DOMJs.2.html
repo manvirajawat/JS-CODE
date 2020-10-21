@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM manipulation</title>
+	<script type="text/javascript">
+		function fun1() {
+		  
+		   var rd1 = document.getElementById("rd1");
+		   var rd2 = document.getElementById("rd2");
+
+		   if(rd1.checked == true)
+		       alert("The channel selected is : "+rd1.value);
+		   else if(rd2.checked == true)
+		       alert("The channel selected is : "+rd2.value);
+		   else
+		   	   alert("No channel selected");
+		}
+		  
+	</script>
+</head>
+<body>
+
+  <input id="rd1" type="radio" name="grp1" value="Simple Snippets">
+  Simple Snippets</input><br><br>
+  <input id="rd2" type="radio" name="grp1" value="Telusko Learning">Telusko Learning</input><br><br>
+  <button onclick="fun1()" id="btn1">Click Me</button>
+  
+</body>
+</html>

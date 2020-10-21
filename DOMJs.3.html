@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM manipulation</title>
+	<script type="text/javascript">
+		function fun1() {
+		  
+		   var select = document.getElementById("selectbox");
+		   //alert(select.options[2].value);
+		   alert(select.options[select.selectedIndex].value);
+
+		}
+		  
+	</script>
+</head>
+<body>
+
+  <select id="selectbox">
+  	<option value="Python">Python</option>
+  	<option value="Java">Java</option>
+  	<option value="C++">C++</option>
+  	<option value="JS">JS</option>
+  	<option value="C">C</option>
+  </select>
+  <br><br>
+  <button onclick="fun1()">Click Me</button>
+  
+</body>
+</html>

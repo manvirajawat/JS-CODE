@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Regular Expressions</title>
+	<script type="text/javascript">
+		function validate() {
+
+			var username = document.getElementById('username').value;
+			//regx = new RegExp("E00","i");
+			//var regx = /E00/i;
+    //----bcoz of this "i"(called flag) both upper and lower case of alphabate are valid----
+			//var regx = /simple/;
+			//var regx = /[sdp]imple/;
+			//var regx = /[a-x]imple/; 
+			//var regx = /[a-x]00/;
+			//var regx = /[a-x]00/i; 
+			//var regx = /[a-x A-X]00/; 
+			//var regx = /[0-5]abc/;
+			//var regx = /[0-5]a[6-9][a-z]/; 
+			//var regx = /[^1abc]abc/;
+	//----bcoz of this "^" we exclude some thing which we don't want----
+	        //var regx = /[^a]abc/;
+			var regx = /[^a-z]abc/;         
+		
+			if(regx.test(username)) {
+
+		      alert("Valid Username");
+			  document.getElementById("lblusr").style.visibility="hidden";
+
+			} else {
+
+			  alert("Invalid Username");
+			  document.getElementById("lblusr").style.visibility="visible";
+
+			}
+           
+		}
+		  
+	</script>
+<body>
+
+     <input id="username" type="text" placeholder="username"/>
+     <label id="lblusr" style="color: red; visibility: hidden;">
+      Invalid</label>
+     <br><br>
+     
+     <button onclick="validate()" type="button">Submit</button>
+
+
+</body>
+</html>

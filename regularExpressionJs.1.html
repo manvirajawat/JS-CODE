@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Regular Expressions</title>  
+	<!--  for regular expression site is :- regex101.com  -->
+	<script type="text/javascript">
+
+		/*
+            \d - match any digit (equal to [0-9])
+            \w - match any word character (a-z,A-Z,0-9 & _)
+            \s - match whitespace character (eg. - spaces and tabs)
+            \t - match a tab only
+		*/
+		function validate() {
+
+			var text = document.getElementById('txt1').value;
+			
+			//var regx = /[7-9]\d{9}/;
+	//------{} in this bracket repetation number write\use----
+			//var regx = /^[7-9]\d{9}/;
+			//var regx = /^[7-9][0-9]{9}$/; ---same work as below line---
+			//var regx = /^[7-9]\d{9}$/;
+    //-----"^" and "$" use at start and end for restricted from invalid i/p only use those which are b/w this |||| and here this "^" used for not exclude any thing-----
+
+
+             //var regx = /^[5-9]\w{8}0$/;
+             var regx = /^[5-9][a-z]{8}0$/;
+	
+			if(regx.test(text)) {
+
+		      document.getElementById("lbltxt").innerHTML="Valid";
+		      document.getElementById("lbltxt").style.visibility="visible";
+			  document.getElementById("lbltxt").style.color="green";
+
+			} else {
+
+			  document.getElementById("lbltxt").innerHTML="InValid";
+		      document.getElementById("lbltxt").style.visibility="visible";
+			  document.getElementById("lbltxt").style.color="red";
+
+			}
+           
+		}
+		  
+	</script>
+<body>
+
+     <input id="txt1" type="text" placeholder="Cellphone"/>
+     <label id="lbltxt" style="color: red; visibility: hidden;">
+      Invalid</label>
+     <br><br>
+     
+     <button onclick="validate()" type="button">Submit</button>
+
+
+</body>
+</html>

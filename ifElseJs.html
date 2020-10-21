@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>control statement if else</title>
+	<script type="text/javascript">
+		var x = 8;  //-------different no. use and check-------
+
+        //find even odd
+
+		if(x%2 == 0) {
+			document.write("<h3>Even Number</h3>");
+        } else {
+             document.write("<h3>Odd Number</h3>");
+        }
+
+        //find positive negative
+
+        if(x > 0) {
+        	document.write("<h2>Positive</h2>");
+        } else if(x < 0) {
+        	document.write("<h2>Negative</h2>");
+        } else {
+        	document.write("<h2>Number is neither positive nor negative</h2>");
+        }
+
+        //find positive or even
+
+        if(x > 0) {
+        	document.write("No. is positive</br>");
+        	if(x%2 == 0) {
+        		document.write("Number is even</br>");
+        	} else {
+        		document.write("No. is positive but odd</br>");
+        	}
+        }
+
+        //use above in single if
+
+        if(x > 0 && x%2 == 0) {
+        	document.write("No. is positive and even");
+        }
+	</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Timing Functions</title>
+	<script type="text/javascript">
+
+    /*
+      1. setTimeout() allow you to exeute statements ONCE after an interval.
+      2. clearTimeout() method clears a timer set with the setTimeout() method.
+      3. setInterval() allow you to exeute statements REPETEDLY after an interval.
+      4. clearInterval() method clears a timer set with the setInterval() method.
+    */
+
+		var ID = 0;
+		var seconds = 0;
+		function printMsg() {
+
+		  //document.getElementById("op").innerHTML = "5 seconds have passed";
+			document.getElementById("op").innerHTML = seconds+"seconds";
+			seconds++;
+
+		}
+		function start() {
+
+			// ID = window.setTimeout(printMsg,5000);
+			ID = window.setInterval(printMsg,1000);
+
+		}
+		function stop() {
+
+           // window.clearTimeout(ID);
+           window.clearInterval(ID);
+
+		}
+	</script>
+<body>
+
+     <button onclick="start()" id="btnAdd">START</button>
+     <h2 id="op">Some Text</h2>
+     <button onclick="stop()" id="btnAdd">STOP</button>
+
+
+</body>
+</html>

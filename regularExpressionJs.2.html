@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Regular Expressions</title>  
+	<script type="text/javascript">
+
+		function validate() {
+
+			var text = document.getElementById('txt1').value;
+			
+			//var regx = /^a$/;
+			//var regx = /a.b/; 
+			//----here "." is used for any thing b/w "a" & "b"-----
+            var regx = /^([a-z0-9\.-]+)@([a-z0-9-]+).([a-z]{2,8})
+                         (.[a-z]{2,8})?$/;
+	        //----- "?" used to made optional what ever before it define -----
+			if(regx.test(text)) {
+
+		      document.getElementById("lbltxt").innerHTML="Valid";
+		      document.getElementById("lbltxt").style.visibility="visible";
+			  document.getElementById("lbltxt").style.color="green";
+
+			} else {
+
+			  document.getElementById("lbltxt").innerHTML="InValid";
+		      document.getElementById("lbltxt").style.visibility="visible";
+			  document.getElementById("lbltxt").style.color="red";
+
+			}
+           
+		}
+		  
+	</script>
+<body>
+    <div>
+     <input id="txt1" type="text" placeholder="Email"/>
+     <label id="lbltxt" style="color: red; visibility: hidden;">
+      Invalid</label>
+     <br><br>
+     
+     <button onclick="validate()" type="button">Submit</button>
+    </div>
+
+     <br><br><br><br>
+
+    <div style="border: 4px solid green;width: 300px;">
+
+     <h3>Email Validation</h3>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;3
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4
+     <br>
+     <i>(yourname)<b>@</b>(domain)<b>.</b>(extension)(.extention)</i>
+     <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;|
+      <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(optional)
+      <br>
+      <b>Example -</b>
+      <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>manvi11@gmail.co.in</i>
+      <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>manvi11@gmail.com</i>
+      <br>
+      <p>
+      	1. Any letter, numbers, dot and/or hypens<br>
+      	2. Any letter, number and /or hypens<br>
+      	3. Any letter(a-z)<br>
+      	4. a dot(.)then any letter
+      </p>
+
+    </div>
+
+
+
+</body>
+</html>

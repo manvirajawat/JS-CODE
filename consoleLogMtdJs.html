@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Console log Method</title>
+	<script type="text/javascript">
+		function addValues() {
+ 
+           var a = document.getElementById("tx1").value;
+           var b = document.getElementById("tx2").value;
+           document.getElementById("op").innerHTML="Result = "+(a+b);
+           // console.log(a+b);
+
+        }
+		</script>
+<body>
+
+     <input id="tx1" type="text" placeholder="Text 1"/>
+     <br><br>
+     <input id="tx2" type="text" placeholder="Text 2"/>
+     <br><br>
+     
+     <button onclick="addValues()" id="btnAdd">ADD</button>
+     <h3 id="op">Result = </h3>
+
+
+</body>
+</html>

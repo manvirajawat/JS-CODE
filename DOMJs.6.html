@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM manipulation</title>
+	<script type="text/javascript">
+		function setNewImage() {
+			document.getElementById("img1").src="../images/img5.jpg";
+		}
+		function setOldImage() {
+            document.getElementById("img1").src="../images/img4.jpg";
+		}
+
+		  
+	</script>
+		
+</head>
+<body>
+
+  <img id="img1" onmouseover="setNewImage()" onmouseout="setOldImage()" 
+  src="../images/img4.jpg" width="300" />
+  
+</body>
+</html>

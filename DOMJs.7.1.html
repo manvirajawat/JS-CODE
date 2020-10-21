@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM manipulation</title>
+	<script type="text/javascript">
+		function validate() {
+
+			var username = document.getElementById('username');
+			var password = document.getElementById('password');
+
+            if(username.value.trim()=="") {
+
+            	//alert("Blank username");
+            	username.style.border = "solid 3px red";
+            	document.getElementById('lblusr1').style.visibility = 
+            	"visible";
+            	return false;
+
+            } else if(password.value.trim()=="") {
+
+                //alert("Blank password");
+                password.style.border = "solid 3px red";
+            	document.getElementById('lblusr2').style.visibility = 
+            	"visible";
+            	return false;
+
+            } else if(password.value.trim().length<5) {
+
+            	//alert("Password is too short");
+            	password.style.border = "solid 3px green";
+            	document.getElementById('lblusr3').style.visibility = 
+            	"visible";
+            	return false;
+
+            } else {
+   
+               true;
+
+            }
+		}
+		  
+	</script>
+<body>
+
+ <form action="msgjs12.7.html" onsubmit="return validate()">
+     <input type="text" name="username" id="username" 
+      placeholder="username" />
+     <label id="lblusr1" style="color: red; visibility: hidden;">
+      Invalid</label>
+     <br><br>
+     <input type="password" name="password" id="password" 
+      placeholder="password" />
+     <label id="lblusr2" style="color: red; visibility: hidden;">
+      Invalid</label>
+     <label id="lblusr3" style="color: green; visibility: hidden;">
+      Password too short</label>
+     <br><br>
+     <button type="submit">Submit</button>
+ </form>
+
+</body>
+</html>
